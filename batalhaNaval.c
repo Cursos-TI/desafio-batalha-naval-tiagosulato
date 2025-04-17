@@ -184,25 +184,25 @@ int main() {
         scanf  ("%d", &coordenada8);
 
                       
-                    for (int i = 0 ; i < 10 ; i++){
-                        printf ("%c",coluna[i]);
-                        for (int j = 0; j < 10 ;j++){
-                            tabuleiro[coordenada1][coordenada2-1]=3;
-                            tabuleiro[coordenada1][coordenada2]=3;
-                            tabuleiro[coordenada1][coordenada2+1]=3;
-                            tabuleiro[coordenada3][coordenada4-1]=3;
-                            tabuleiro[coordenada3][coordenada4]=3;
-                            tabuleiro[coordenada3][coordenada4+1]=3;
-                            tabuleiro[coordenada5-1][coordenada6]=3;
-                            tabuleiro[coordenada5][coordenada6]=3;
-                            tabuleiro[coordenada5+1][coordenada6]=3;
-                            tabuleiro[coordenada7-1][coordenada8]=3;
-                            tabuleiro[coordenada7][coordenada8]=3;
-                            tabuleiro[coordenada7+1][coordenada8]=3;
-                        }
-                        printf("\n");
-                    }
-                    printf("\n");                        
+        for (int i = 0 ; i < 10 ; i++){
+        printf ("%c",coluna[i]);
+        for (int j = 0; j < 10 ;j++){
+        tabuleiro[coordenada1][coordenada2-1]=3;
+        tabuleiro[coordenada1][coordenada2]=3;
+        tabuleiro[coordenada1][coordenada2+1]=3;
+        tabuleiro[coordenada3][coordenada4-1]=3;
+        tabuleiro[coordenada3][coordenada4]=3;
+        tabuleiro[coordenada3][coordenada4+1]=3;
+        tabuleiro[coordenada5-1][coordenada6]=3;
+        tabuleiro[coordenada5][coordenada6]=3;
+        tabuleiro[coordenada5+1][coordenada6]=3;
+        tabuleiro[coordenada7-1][coordenada8]=3;
+        tabuleiro[coordenada7][coordenada8]=3;
+        tabuleiro[coordenada7+1][coordenada8]=3;
+        }
+         printf("\n");
+        }
+        printf("\n");                        
 
         printf("Escolha agora a qual super poder você vai querer utilizar \n");
         printf("A coordenada de Ataque representa o centro do ataque \n");
@@ -221,7 +221,11 @@ int main() {
             printf ("Digite um numero de 0 a 9 sendo 0 = A e 9 = j no tabuleiro\n");
             scanf("%d", &coord_ataque2);
             if (tabuleiro [coord_ataque1 -1] [coord_ataque2] == 3 || tabuleiro [coord_ataque1][coord_ataque2+-1] ==3 || tabuleiro[coord_ataque1+1][coord_ataque2+-2]==3){
+               
+                
+               
                 printf("Voce ganhou 'Acertou o Navio'\n");
+
                 } else {
                     printf("Voce perdeu 'Acertou a agua'\n");
                 }
@@ -231,26 +235,76 @@ int main() {
                 printf("Tabuleiro Batalha naval\n");
                 printf(" ");
                 
-                for (int b = 0; b <10; b++){
+            for (int b = 0; b <10; b++){
                     
-                printf ("   %c", linha[b]);    
+              printf ("   %c", linha[b]);    
             }
                 printf("\n");
                         
-                        for (int i = 0 ; i < 10 ; i++){
-                            printf ("%c",coluna[i]);
-                            for (int j = 0; j < 10 ;j++){
-                                
-                                                   
-                                printf("   %i",tabuleiro[i][j]);
-                            
-                            
-                        }
+                for (int i = 0 ; i < 10 ; i++){
+                   printf ("%c",coluna[i]);
+                   for (int j = 0; j < 10 ;j++){
+                            if (tabuleiro [coord_ataque1 -1] [coord_ataque2] == 3){
+                                tabuleiro [coord_ataque1 -1] [coord_ataque2] = 5;}
+                            if (tabuleiro [coord_ataque1 -1] [coord_ataque2] == 0){
+                                tabuleiro [coord_ataque1 -1] [coord_ataque2] = 4; } 
+
+                            if (tabuleiro [coord_ataque1] [coord_ataque2] == 3){
+                                tabuleiro [coord_ataque1] [coord_ataque2] = 5;}
+                            if (tabuleiro [coord_ataque1] [coord_ataque2] == 0){
+                                tabuleiro [coord_ataque1] [coord_ataque2] = 4;}                                          
+                            if (tabuleiro [coord_ataque1][coord_ataque2+1] ==3){
+                                tabuleiro [coord_ataque1][coord_ataque2+1] =5;}
+                            if (tabuleiro [coord_ataque1][coord_ataque2+1] ==0){
+                                tabuleiro [coord_ataque1][coord_ataque2+1] =4;} 
+                            if (tabuleiro [coord_ataque1][coord_ataque2-1] ==3){
+                                tabuleiro [coord_ataque1][coord_ataque2-1] =5;} 
+                            if (tabuleiro [coord_ataque1][coord_ataque2-1] ==0){
+                                tabuleiro [coord_ataque1][coord_ataque2-1] =4; }                       
+
+                            if (tabuleiro[coord_ataque1+1][coord_ataque2-2]==3){
+                                tabuleiro[coord_ataque1+1][coord_ataque2-2]= 5;}
+                            if (tabuleiro[coord_ataque1+1][coord_ataque2-2]==0){
+                                tabuleiro[coord_ataque1+1][coord_ataque2-2]=4;}
+                            if (tabuleiro[coord_ataque1+1][coord_ataque2-1]==3){
+                                tabuleiro[coord_ataque1+1][coord_ataque2-1]= 5;}
+                            if (tabuleiro[coord_ataque1+1][coord_ataque2-1]==0){
+                                tabuleiro[coord_ataque1+1][coord_ataque2-1]=4;}
+                            if (tabuleiro[coord_ataque1+1][coord_ataque2+2]==3){
+                                tabuleiro[coord_ataque1+1][coord_ataque2+2]= 5;}
+                            if (tabuleiro[coord_ataque1+1][coord_ataque2+2]==0){
+                                tabuleiro[coord_ataque1+1][coord_ataque2+2]=4;}
+                            if (tabuleiro[coord_ataque1+1][coord_ataque2+1]==3){
+                                tabuleiro[coord_ataque1+1][coord_ataque2+1]= 5;}
+                            if (tabuleiro[coord_ataque1+1][coord_ataque2+1]==0){
+                                tabuleiro[coord_ataque1+1][coord_ataque2+1]=4;}
+                            if (tabuleiro[coord_ataque1+1][coord_ataque2]==3){
+                                tabuleiro[coord_ataque1+1][coord_ataque2]= 5;}
+                            if (tabuleiro[coord_ataque1+1][coord_ataque2]==0){
+                                tabuleiro[coord_ataque1+1][coord_ataque2]=4;}
+
+                            printf("   %i",tabuleiro[i][j]);
+
+                    }                              
+                    printf("\n");  
+                          
+                    }
+                        
+
                         printf("\n");
+                        break;
+                    case 2:
+                    
+                    
+
+
+                    
                     }
                     printf("\n");
-                    break;
-                } 
+                    return 0;
+    } 
+                  
+                
        
     
 
@@ -266,14 +320,8 @@ int main() {
         //}
    
         
-    //}
-    
-    
-        
-    
-    
-
-    
+    //}if (tabuleiro [coord_ataque1 -1] [coord_ataque2] == 3 ){
+       
 
    
 
@@ -304,5 +352,13 @@ int main() {
     // 1 1 1 1 1
     // 0 0 1 0 0
 
-    return 0;
-}
+
+
+
+
+
+
+
+
+
+
