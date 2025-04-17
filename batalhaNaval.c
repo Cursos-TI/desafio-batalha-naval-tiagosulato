@@ -185,8 +185,8 @@ int main() {
 
                       
         for (int i = 0 ; i < 10 ; i++){
-        printf ("%c",coluna[i]);
-        for (int j = 0; j < 10 ;j++){
+          for (int j = 0; j < 10 ;j++){
+
         tabuleiro[coordenada1][coordenada2-1]=3;
         tabuleiro[coordenada1][coordenada2]=3;
         tabuleiro[coordenada1][coordenada2+1]=3;
@@ -200,7 +200,7 @@ int main() {
         tabuleiro[coordenada7][coordenada8]=3;
         tabuleiro[coordenada7+1][coordenada8]=3;
         }
-         printf("\n");
+         
         }
         printf("\n");                        
 
@@ -293,7 +293,167 @@ int main() {
 
                         printf("\n");
                         break;
-                    case 2:
+            case 2:
+                    
+            printf("Voce escolheu a Cruz.\n");
+            printf("Escolha a 1 coordenada. \n ");
+            printf("Escolha um numero de 0 a 9. \n");
+            scanf("%d", &coord_ataque1);
+            printf ("Digite um numero de 0 a 9 sendo 0 = A e 9 = j no tabuleiro.\n");
+            scanf("%d", &coord_ataque2);
+
+            if(tabuleiro [coord_ataque1] [coord_ataque2] == 3 || tabuleiro [coord_ataque1 -1] [coord_ataque2] == 3 || tabuleiro [coord_ataque1 -2] [coord_ataque2] == 3 ||
+               tabuleiro [coord_ataque1 +1] [coord_ataque2] == 3 || tabuleiro [coord_ataque1 +2] [coord_ataque2] == 3 || tabuleiro [coord_ataque1] [coord_ataque2+1] == 3 ||
+               tabuleiro [coord_ataque1 -1] [coord_ataque2+2] == 3 ) {
+
+                printf("Voce ganhou 'Acertou o Navio'\n");
+
+                } else {
+                printf("Voce perdeu 'Acertou a agua'\n");     
+               }
+
+               printf("Tabuleiro Batalha naval\n");
+               printf(" ");
+               
+            for (int b = 0; b <10; b++){
+                   
+             printf ("   %c", linha[b]);    
+           }
+               printf("\n");
+                       
+               for (int i = 0 ; i < 10 ; i++){
+                  printf ("%c",coluna[i]);
+                  for (int j = 0; j < 10 ;j++){
+                    if (tabuleiro [coord_ataque1] [coord_ataque2] == 3){
+                        tabuleiro [coord_ataque1] [coord_ataque2] = 5;}
+                    if (tabuleiro [coord_ataque1] [coord_ataque2] == 0){
+                        tabuleiro [coord_ataque1] [coord_ataque2] = 4;} 
+
+                    if (tabuleiro [coord_ataque1 -1] [coord_ataque2] == 3){
+                        tabuleiro [coord_ataque1 -1] [coord_ataque2] = 5;}
+                    if (tabuleiro [coord_ataque1 -1] [coord_ataque2] == 0){
+                        tabuleiro [coord_ataque1 -1] [coord_ataque2] = 4; } 
+
+                    if (tabuleiro [coord_ataque1 -2][coord_ataque2] ==3){
+                        tabuleiro [coord_ataque1 -2][coord_ataque2] =5;}
+                    if (tabuleiro [coord_ataque1 -2][coord_ataque2] ==0){
+                        tabuleiro [coord_ataque1 -2][coord_ataque2] =4;}
+                                                                    
+                    if (tabuleiro [coord_ataque1 +1] [coord_ataque2] == 3){
+                        tabuleiro [coord_ataque1 +1] [coord_ataque2] = 5;}
+                    if (tabuleiro [coord_ataque1 +1] [coord_ataque2] == 0){
+                        tabuleiro [coord_ataque1 +1] [coord_ataque2] = 4; } 
+                            
+                    if (tabuleiro [coord_ataque1 +2][coord_ataque2] ==3){
+                        tabuleiro [coord_ataque1 +2][coord_ataque2] =5;}
+                    if (tabuleiro [coord_ataque1 +2][coord_ataque2] ==0){
+                        tabuleiro [coord_ataque1 +2][coord_ataque2] =4;}
+
+                    if (tabuleiro [coord_ataque1][coord_ataque2-1] ==3){
+                        tabuleiro [coord_ataque1][coord_ataque2-1] =5;} 
+                    if (tabuleiro [coord_ataque1][coord_ataque2-1] ==0){
+                        tabuleiro [coord_ataque1][coord_ataque2-1] =4; }                       
+
+                    if (tabuleiro [coord_ataque1] [coord_ataque2 -2] == 3){
+                        tabuleiro [coord_ataque1] [coord_ataque2 -2] = 5;}
+                    if (tabuleiro [coord_ataque1] [coord_ataque2 -2] == 0){
+                        tabuleiro [coord_ataque1] [coord_ataque2 -2] = 4; } 
+                            
+                    if (tabuleiro [coord_ataque1][coord_ataque2+1] ==3){
+                        tabuleiro [coord_ataque1][coord_ataque2+1] =5;}
+                    if (tabuleiro [coord_ataque1][coord_ataque2+1] ==0){
+                        tabuleiro [coord_ataque1][coord_ataque2+1] =4;}
+
+                    if (tabuleiro[coord_ataque1][coord_ataque2+2]==3){
+                        tabuleiro[coord_ataque1][coord_ataque2+2]= 5;}
+                    if (tabuleiro[coord_ataque1][coord_ataque2+2]==0){
+                        tabuleiro[coord_ataque1][coord_ataque2+2]=4;}
+
+                           
+
+                           printf("   %i",tabuleiro[i][j]);
+
+                   }                              
+                   printf("\n");  
+                         
+                   }
+                       
+
+                       printf("\n");
+                       break;
+
+            case 3:
+
+            printf("Voce escolheu o Losangulo.\n");
+            printf("Escolha a 1 coordenada. \n ");
+            printf("Escolha um numero de 0 a 9. \n");
+            scanf("%d", &coord_ataque1);
+            printf ("Digite um numero de 0 a 9 sendo 0 = A e 9 = j no tabuleiro.\n");
+            scanf("%d", &coord_ataque2);
+
+            if(tabuleiro [coord_ataque1] [coord_ataque2] == 3 || tabuleiro [coord_ataque1 -1] [coord_ataque2] == 3 || tabuleiro [coord_ataque1 +1] [coord_ataque2] == 3 || 
+               tabuleiro [coord_ataque1] [coord_ataque2 +1] == 3 || tabuleiro [coord_ataque1] [coord_ataque2 -1] == 3 ) {
+            
+                printf("Voce ganhou 'Acertou o Navio'\n");
+
+            } else {
+            printf("Voce perdeu 'Acertou a agua'\n");     
+            }
+
+            printf("Tabuleiro Batalha naval\n");
+            printf(" ");
+           
+            for (int b = 0; b <10; b++){
+               
+             printf ("   %c", linha[b]);    
+            }
+              printf("\n");
+                   
+           for (int i = 0 ; i < 10 ; i++){
+              printf ("%c",coluna[i]);
+              for (int j = 0; j < 10 ;j++){
+                if (tabuleiro [coord_ataque1] [coord_ataque2] == 3){
+                    tabuleiro [coord_ataque1] [coord_ataque2] = 5;}
+                if (tabuleiro [coord_ataque1] [coord_ataque2] == 0){
+                    tabuleiro [coord_ataque1] [coord_ataque2] = 4;} 
+
+                if (tabuleiro [coord_ataque1 -1] [coord_ataque2] == 3){
+                    tabuleiro [coord_ataque1 -1] [coord_ataque2] = 5;}
+                if (tabuleiro [coord_ataque1 -1] [coord_ataque2] == 0){
+                    tabuleiro [coord_ataque1 -1] [coord_ataque2] = 4; } 
+
+                if (tabuleiro [coord_ataque1 +1][coord_ataque2] ==3){
+                    tabuleiro [coord_ataque1 +1][coord_ataque2] =5;}
+                if (tabuleiro [coord_ataque1 +1][coord_ataque2] ==0){
+                    tabuleiro [coord_ataque1 +1][coord_ataque2] =4;}
+                                                                
+                if (tabuleiro [coord_ataque1] [coord_ataque2 -1] == 3){
+                    tabuleiro [coord_ataque1] [coord_ataque2 -1] = 5;}
+                if (tabuleiro [coord_ataque1] [coord_ataque2 -1] == 0){
+                    tabuleiro [coord_ataque1] [coord_ataque2 -1] = 4; } 
+                        
+                if (tabuleiro [coord_ataque1][coord_ataque2 +1] ==3){
+                    tabuleiro [coord_ataque1][coord_ataque2 +1] =5;}
+                if (tabuleiro [coord_ataque1][coord_ataque2 +1] ==0){
+                    tabuleiro [coord_ataque1][coord_ataque2 +1] =4;}
+
+                                      
+
+                       printf("   %i",tabuleiro[i][j]);
+
+               }                              
+               printf("\n");  
+                     
+               }
+                   
+
+                   printf("\n");
+                   break;
+
+
+            default :
+                    printf("Opção invalida\n");
+
                     
                     
 
