@@ -249,8 +249,8 @@ int main() {
                         printf("\n");
                     }
                     printf("\n");
-
-
+                    break;
+                } 
        
     
 
